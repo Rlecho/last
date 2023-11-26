@@ -1,0 +1,125 @@
+{% load static %}
+{% block head %} 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" crossorigin="anonymous" />
+
+{% endblock head %} 
+{% block style %} 
+
+
+<style>
+
+    .social-icons a {
+        display: inline-block;
+        margin-right: 10px;
+        color: #ffffff; /* Couleur des icônes */
+    }
+    
+    .social-icons i {
+        font-size: 30px; /* Ajustez la taille des icônes selon vos besoins */
+    }
+    
+    body {
+        margin-top: 0;
+        padding-top: 0;
+        font-family: Arial, sans-serif;    
+        background-image: url("{% static 'img/maiss.jpg' %}");background-size:cover; background-repeat:no-repeat;  background-size: cover;
+      
+        color: #ffffff;
+    }
+
+    .login-container {
+        width: 300px;
+        margin: 150px auto;
+        padding: 20px;
+        background-color: rgba(0, 112, 124, 0.8);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .logo {
+        /* Ajoutez ici le style de votre logo */
+    }
+
+    .title {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .input-group {
+        margin-top: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #ffffff;
+        color: #00707C;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .connect-with {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .social-icons img {
+        width: 30px; /* Ajustez la taille des icônes selon vos besoins */
+        height: 30px;
+        border-radius: 50%;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+</style>
+{% endblock style %} 
+
+
+    {% block content %} 
+    
+    <div class="login-container">
+        <div class="logo">
+            <!-- Ajoutez ici le code de votre logo -->
+            <a href="{% url 'index' %}"><img class="main-logo" src=" {% static 'img/logo/logo.png' %}" alt="" /></a>
+        </div>
+        <div class="title">Se Connecter</div>
+        <div class="input-group">
+            <input type="text" placeholder="Nom d'utilisateur">
+            <input type="password" placeholder="Mot de passe">
+            <button> <a href="{%url 'index' %}">Se Connecter</a> </button>
+        </div>
+        <div class="connect-with">Se connecter grâce à :</div>
+        <div class="social-icons">
+            <a href="#"><img src=" {% static 'img/google.png' %}" alt="Google"></a>
+            <a href="#"><img src=" {% static 'img/face.png' %}" alt="Facebook"></a>
+            <a href="#"><img src=" {% static 'img/apple.png' %}" alt="Instagram"></a>
+        </div>
+
+        <div>
+            <p>Pas de compte ?    <a href="{%url 'inscrit' %}">inscrivez-vous</a>  </p>
+        </div>
+    </div>
+    {% endblock content %} 
+
+    {% block script %} 
+    {% endblock script %} 

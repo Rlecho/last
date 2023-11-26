@@ -1,0 +1,249 @@
+{% extends 'gestionnaires/base.html' %}
+{% load static %}
+{% block head %} 
+{% endblock head %} 
+{% block style %} 
+	<style> 
+							
+			
+	</style>
+	{% endblock style %}
+<head>
+
+</head>
+
+{% block content %}
+   
+
+    <div class="left-sidebar-pro"  style="background-color:  #00707C;">
+        <nav id="sidebar" class="" style="background-color: #00707C;">
+            <div class="sidebar-header">
+                <a href="index.html"><img class="main-logo" src=" {% static 'img/logo/logo.png' %}" alt="" /></a>
+                <strong><img src="{% static 'img/logo/logosn.png' %} " alt="" /></strong>
+            </div>
+
+			{% comment %} <div class="nalika-profile">
+				<div class="profile-dtl">
+					<a href="#"><img src=" {% static 'img/notification/4.jpg' %} " alt="" /></a>
+					<h2>Lakian <span class="min-dtn">Das</span></h2>
+				</div>
+			</div> {% endcomment %}
+            <div class="left-custom-menu-adp-wrap" style="background-color: #00707C;">
+                <nav class="left-sidebar-menu-pro" style="background-color: #00707C;">
+                    <ul class="metismenu" id="">
+                        <li class="active" style="margin-top: 2cm;">
+                            <a class="" href="{% url 'index'  %}">
+								   <i class="icon nalika-home icon-wrap"></i>
+								   <span class="mini-click-non">Ma maison</span>
+								</a>   
+                        </li>
+
+                        <li >
+                            <a class="" href="{% url 'facturation' %}" aria-expanded="false"><i class="icon nalika-bar-chart icon-wrap"></i> <span class="mini-click-non">Facturation</span></a>
+                        </li>
+
+                        <li>
+                            <a class="" href="{% url 'user' %}" aria-expanded="false"><i class="icon nalika-user icon-wrap"></i> <span class="mini-click-non">Utilisateurs</span></a>
+                        </li>
+                        <li>
+                            <a class="" href="{% url 'plainte' %}" aria-expanded="false"><i class="icon nalika-forms icon-wrap"></i> <span class="mini-click-non">Plaintes</span></a>
+                        </li>
+                       
+                        <li>
+                            <a class="" href="{% url 'rapport' %}" aria-expanded="false"><i class="icon nalika-table icon-wrap"></i> <span class="mini-click-non">Rapports <br><span>et Analyses</span> </span></a>
+                        </li>
+                        <li >
+                            <a class="" href="{% url 'reglage' %}" aria-expanded="false"><i class="icon nalika-settings icon-wrap"></i> <span class="mini-click-non">Reglages</span></a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href=" {url 'index'} "><img class="main-logo" src=" {% static 'img/logo/logo.png' %}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    {% comment %} <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+													<i class="icon nalika-menu-task"></i>
+												</button>
+                                        </div>
+                                    </div> {% endcomment %}
+                                     <div class="col-sm-12 col-xs-12">
+                                        <div class="header-right-info">
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                                <li class="nav-item ">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="icon nalika-unlocked" aria-hidden="true"></i>Deconnecter</a>
+
+                                                </li>
+                                              
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu start -->
+            {% comment %} <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="mobile-menu">
+                                <nav id="dropdown">
+                                    <ul class="mobile-menu-nav">
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Charts" href="#">Home <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                            <ul class="collapse dropdown-header-top">
+                                                <li><a href="analytics.html">Analytics</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#demo" href="#">Mailbox <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                            
+                                        </li>
+
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#others" href="#">Miscellaneous <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                           
+                                        </li>
+
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Miscellaneousmob" href="#">Interface <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Chartsmob" href="#">Charts <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                          
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Tablesmob" href="#">Tables <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                           
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#formsmob" href="#">Forms <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Pagemob" href="#">Pages <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+            <!-- Mobile Menu end -->
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="breadcomb-wp">
+											<div class="breadcomb-icon">
+												<i class="icon nalika-bar-chart"></i>
+											</div>
+											<div class="breadcomb-ctn">
+												<h2>Dashboard</h2>
+												<p>Bienvenue <span class="bread-ntd"></span></p>
+											</div>
+										</div>
+                                    </div>
+                                    {% comment %} <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="breadcomb-report">
+											<button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="icon nalika-download"></i></button>
+										</div>
+                                    </div> {% endcomment %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id='chart'>
+
+            </div>
+        </div>
+
+
+        {% comment %} <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright © 2023 <a href="https://iot.com/">iot</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </div>
+   
+    {% endblock content %}
+
+    {% block script %}
+
+    <script>
+
+        var options = {
+            series: [{
+              name: "Desktops",
+              data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+          }],
+            chart: {
+            height: 350,
+            type: 'line',
+            zoom: {
+              enabled: false
+            }
+          },
+          dataLabels: {
+            enabled: false
+          },
+          stroke: {
+            curve: 'straight'
+          },
+          title: {
+            text: 'Product Trends by Month',
+            align: 'left'
+          },
+          grid: {
+            row: {
+              colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+              opacity: 0.5
+            },
+          },
+          xaxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+          }
+          };
+  
+          var chart = new ApexCharts(document.querySelector("#chart"), options);
+          chart.render();
+        
+    </script>
+    {% endblock script %}

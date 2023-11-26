@@ -1,0 +1,557 @@
+{% extends 'gestionnaires/base.html' %}
+{% load static %}
+{% block head %} 
+{% endblock head %} 
+{% block style %} 
+	<style> 
+							
+			
+	</style>
+	{% endblock style %}
+<head>
+
+</head>
+
+{% block content %}
+    <div class="left-sidebar-pro"  style="background-color:  #00707C;">
+        <nav id="sidebar" class="" style="background-color: #00707C;">
+            <div class="sidebar-header">
+                <a href=" {% url 'index'  %}"><img class="main-logo" src=" {% static 'img/logo/logo.png' %}" alt="" /></a>
+                <strong><img src="{% static 'img/logo/logosn.png' %} " alt="" /></strong>
+            </div>
+
+			{% comment %} <div class="nalika-profile">
+				<div class="profile-dtl">
+					<a href="#"><img src=" {% static 'img/notification/4.jpg' %} " alt="" /></a>
+					<h2>Lakian <span class="min-dtn">Das</span></h2>
+				</div>
+			</div> {% endcomment %}
+            <div class="left-custom-menu-adp-wrap" style="background-color: #00707C;">
+                <nav class="left-sidebar-menu-pro" style="background-color: #00707C;">
+                    <ul class="metismenu" id="">
+                        <li class="active" style="margin-top: 2cm;">
+                            <a class="" href="{% url 'index' %}">
+								   <i class="icon nalika-home icon-wrap"></i>
+								   <span class="mini-click-non">Ma maison</span>
+								</a>   
+                        </li>
+
+                        <li >
+                            <a class="" href="{% url 'facturation' %}" aria-expanded="false"><i class="icon nalika-bar-chart icon-wrap"></i> <span class="mini-click-non">Facturation</span></a>
+                        </li>
+
+                        <li>
+                            <a class="" href="{% url 'user' %}" aria-expanded="false"><i class="icon nalika-user icon-wrap"></i> <span class="mini-click-non">Utilisateurs</span></a>
+                        </li>
+                        <li>
+                            <a class="" href="{% url 'plainte' %}" aria-expanded="false"><i class="icon nalika-forms icon-wrap"></i> <span class="mini-click-non">Plaintes</span></a>
+                        </li>
+                       
+                        <li>
+                            <a class="" href="{% url 'rapport' %}" aria-expanded="false"><i class="icon nalika-table icon-wrap"></i> <span class="mini-click-non">Rapports <br><span>et Analyses</span> </span></a>
+                        </li>
+                        <li >
+                            <a class="" href="{% url 'reglage' %}" aria-expanded="false"><i class="icon nalika-settings icon-wrap"></i> <span class="mini-click-non">Reglages</span></a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href="index.html"><img class="main-logo" src=" {% static 'img/logo/logo.png' %}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    {% comment %} <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+													<i class="icon nalika-menu-task"></i>
+												</button>
+                                        </div>
+                                    </div> {% endcomment %}
+                                     <div class="col-sm-12 col-xs-12">
+                                        <div class="header-right-info">
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                                <li class="nav-item ">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="icon nalika-unlocked" aria-hidden="true"></i>Deconnecter</a>
+
+                                                </li>
+                                              
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu start -->
+            {% comment %} <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="mobile-menu">
+                                <nav id="dropdown">
+                                    <ul class="mobile-menu-nav">
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Charts" href="#">Home <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                            <ul class="collapse dropdown-header-top">
+                                                <li><a href="analytics.html">Analytics</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#demo" href="#">Mailbox <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                            
+                                        </li>
+
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#others" href="#">Miscellaneous <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                           
+                                        </li>
+
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Miscellaneousmob" href="#">Interface <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Chartsmob" href="#">Charts <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                          
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Tablesmob" href="#">Tables <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                           
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#formsmob" href="#">Forms <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Pagemob" href="#">Pages <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+            <!-- Mobile Menu end -->
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="breadcomb-wp">
+											<div class="breadcomb-icon">
+												<i class="icon nalika-home"></i>
+											</div>
+											<div class="breadcomb-ctn">
+												<h2>Dashboard</h2>
+												<p>Bienvenue <span class="bread-ntd">Baudouin GBEGAN</span></p>
+											</div>
+										</div>
+                                    </div>
+                                    {% comment %} <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="breadcomb-report">
+											<button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="icon nalika-download"></i></button>
+										</div>
+                                    </div> {% endcomment %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-admin container-fluid" style="margin-bottom: 20px;">
+            <div class="row admin text-center">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
+                                <h4 class="text-left text-uppercase"><b>Taux d'autonomie</b></h4>
+                                <div class="row vertical-center-box vertical-center-box-tablet">
+                                    <div class="col-xs-3 mar-bot-15 text-left">
+                                        <label class="label bg-green">100% <i class="fa fa-level-up" aria-hidden="true"></i></label>
+                                    </div>
+                                    <div class="col-xs-9 cus-gh-hd-pro">
+                                        {% comment %} <h2 class="text-right no-margin">10,000</h2> {% endcomment %}
+                                    </div>
+                                </div>
+                                <div class="progress progress-mini">
+                                    <div style="width: 78%;" class="progress-bar bg-green"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="margin-bottom:1px;">
+                            <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
+                                <h4 class="text-left text-uppercase"><b>Auto Consommation</b></h4>
+                                <div class="row vertical-center-box vertical-center-box-tablet">
+                                    <div class="text-left col-xs-3 mar-bot-15">
+                                        <label class="label bg-red">100% <i class="fa fa-level-down" aria-hidden="true"></i></label>
+                                    </div>
+                                    <div class="col-xs-9 cus-gh-hd-pro">
+                                        {% comment %} <h2 class="text-right no-margin">5,000</h2> {% endcomment %}
+                                    </div>
+                                </div>
+                                <div class="progress progress-mini">
+                                    <div style="width: 38%;" class="progress-bar progress-bar-danger bg-red"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
+                                <h4 class="text-left text-uppercase"><b>MaSmart Batterie</b></h4>
+                                <div class="row vertical-center-box vertical-center-box-tablet">
+                                    <div class="text-left col-xs-3 mar-bot-15">
+                                        <label class="label bg-blue">80% <i class="fa fa-level-up" aria-hidden="true"></i></label>
+                                    </div>
+                                    <div class="col-xs-9 cus-gh-hd-pro">
+                                        {% comment %} <h2 class="text-right no-margin">70,000</h2> {% endcomment %}
+                                    </div>
+                                </div>
+                                <div class="progress progress-mini">
+                                    <div style="width: 60%;" class="progress-bar bg-blue"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
+                                <h4 class="text-left text-uppercase"><b>Temperature</b></h4>
+                                <div class="row vertical-center-box vertical-center-box-tablet">
+                                    <div class="text-left col-xs-3 mar-bot-15">
+                                        <label class="label bg-purple">80% <i class="fa fa-level-up" aria-hidden="true"></i></label>
+                                    </div>
+                                    <div class="col-xs-9 cus-gh-hd-pro">
+                                        {% comment %} <h2 class="text-right no-margin">$100,000</h2> {% endcomment %}
+                                    </div>
+                                </div>
+                                <div class="progress progress-mini">
+                                    <div style="width: 60%;" class="progress-bar bg-purple"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% comment %} <div class="product-sales-area mg-tb-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                        <div class="product-sales-chart">
+                            <div class="portlet-title">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="caption pro-sl-hd">
+                                            <span class="caption-subject text-uppercase"><b>Product Sales</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="actions graph-rp">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-grey active">
+													<input type="radio" name="options" class="toggle" id="option1" checked="">Today</label>
+                                                <label class="btn btn-grey">
+													<input type="radio" name="options" class="toggle" id="option2">Week</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="curved-line-chart" class="flot-chart-sts flot-chart curved-chart-statistic"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="white-box analytics-info-cs mg-b-30 res-mg-t-30">
+                            <h3 class="box-title">Total Visit</h3>
+                            <ul class="list-inline two-part-sp">
+                                <li>
+                                    <div id="sparklinedash"></div>
+                                </li>
+                                <li class="text-right sp-cn-r"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter sales-sts-ctn">8659</span></li>
+                            </ul>
+                        </div>
+                        <div class="white-box analytics-info-cs mg-b-30">
+                            <h3 class="box-title">Total Page Views</h3>
+                            <ul class="list-inline two-part-sp">
+                                <li>
+                                    <div id="sparklinedash2"></div>
+                                </li>
+                                <li class="text-right"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter sales-sts-ctn">7469</span></li>
+                            </ul>
+                        </div>
+                        <div class="white-box analytics-info-cs mg-b-30">
+                            <h3 class="box-title">Unique Visitor</h3>
+                            <ul class="list-inline two-part-sp">
+                                <li>
+                                    <div id="sparklinedash3"></div>
+                                </li>
+                                <li class="text-right"><i class="fa fa-level-up" aria-hidden="true"></i> <span class="counter sales-sts-ctn">6011</span></li>
+                            </ul>
+                        </div>
+                        <div class="white-box analytics-info-cs">
+                            <h3 class="box-title">Bounce Rate</h3>
+                            <ul class="list-inline two-part-sp">
+                                <li>
+                                    <div id="sparklinedash4"></div>
+                                </li>
+                                <li class="text-right"><i class="fa fa-level-down" aria-hidden="true"></i> <span class="sales-sts-ctn">18%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+
+
+        {% comment %} <div class="traffic-analysis-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="white-box tranffic-als-inner">
+                            <h3 class="box-title"><small class="pull-right m-t-10 text-success last-month-sc cl-one"><i class="fa fa-sort-asc"></i> 18% last month</small> Site Traffic</h3>
+                            <div class="stats-row">
+                                <div class="stat-item">
+                                    <h6>Overall Growth</h6>
+                                    <b>80.40%</b></div>
+                                <div class="stat-item">
+                                    <h6>Montly</h6>
+                                    <b>15.40%</b></div>
+                                <div class="stat-item">
+                                    <h6>Day</h6>
+                                    <b>5.50%</b></div>
+                            </div>
+                            <div id="sparkline8"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="white-box tranffic-als-inner res-mg-t-30">
+                            <h3 class="box-title"><small class="pull-right m-t-10 text-danger last-month-sc cl-two"><i class="fa fa-sort-desc"></i> 18% last month</small>Site Traffic</h3>
+                            <div class="stats-row">
+                                <div class="stat-item">
+                                    <h6>Overall Growth</h6>
+                                    <b>80.40%</b></div>
+                                <div class="stat-item">
+                                    <h6>Montly</h6>
+                                    <b>15.40%</b></div>
+                                <div class="stat-item">
+                                    <h6>Day</h6>
+                                    <b>5.50%</b></div>
+                            </div>
+                            <div id="sparkline9"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="white-box tranffic-als-inner res-mg-t-30">
+                            <h3 class="box-title"><small class="pull-right m-t-10 text-success last-month-sc cl-three"><i class="fa fa-sort-asc"></i> 18% last month</small>Site Traffic</h3>
+                            <div class="stats-row">
+                                <div class="stat-item">
+                                    <h6>Overall Growth</h6>
+                                    <b>80.40%</b></div>
+                                <div class="stat-item">
+                                    <h6>Montly</h6>
+                                    <b>15.40%</b></div>
+                                <div class="stat-item">
+                                    <h6>Day</h6>
+                                    <b>5.50%</b></div>
+                            </div>
+                            <div id="sparkline10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+
+
+        {% comment %} <div class="product-sales-area mg-tb-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                        <div class="product-sales-chart">
+                            <div class="portlet-title">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="caption pro-sl-hd">
+                                            <span class="caption-subject text-uppercase"><b>Order Statistic</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="actions graph-rp">
+                                            <a href="#" class="btn btn-dark-blue btn-circle active tip-top" data-toggle="tooltip" title="Upload">
+													<i class="fa fa-cloud-download" aria-hidden="true"></i>
+												</a>
+                                            <a href="#" class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh">
+													<i class="fa fa-reply" aria-hidden="true"></i>
+												</a>
+                                            <a href="#" class="btn btn-blue-grey btn-circle active tip-top" data-toggle="tooltip" title="Delete">
+													<i class="fa fa-trash-o" aria-hidden="true"></i>
+												</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="line-chart" class="flot-chart flot-chart-sts line-chart-statistic"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="analytics-rounded mg-b-30 res-mg-t-30">
+                            <div class="analytics-rounded-content">
+                                <h5>Percentage distribution</h5>
+                                <h2><span class="counter">60</span>/20</h2>
+                                <div class="text-center">
+                                    <div id="sparkline51"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analytics-rounded">
+                            <div class="analytics-rounded-content">
+                                <h5>Percentage division</h5>
+                                <h2><span class="counter">150</span>/<span class="counter">54</span></h2>
+                                <div class="text-center">
+                                    <div id="sparkline52"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+       
+        {% comment %} <div class="calender-area mg-tb-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="calender-inner">
+                            <div id='calendar'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+        <div id="my-chart">
+        </div>
+
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright © 2023 <a href="https://iot.com/">iot</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    {% endblock content %}
+
+    {% block script %}
+
+    <script>
+        var options = {
+            series: [{
+              name: "Session Duration",
+              data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+            },
+            {
+              name: "Page Views",
+              data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+            },
+            {
+              name: 'Total Visits',
+              data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+            }
+          ],
+            chart: {
+            height: 350,
+            type: 'line',
+            zoom: {
+              enabled: false
+            },
+          },
+          dataLabels: {
+            enabled: false
+          },
+          stroke: {
+            width: [5, 7, 5],
+            curve: 'straight',
+            dashArray: [0, 8, 5]
+          },
+          title: {
+            text: 'Page Statistics',
+            align: 'left'
+          },
+          legend: {
+            tooltipHoverFormatter: function(val, opts) {
+              return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+            }
+          },
+          markers: {
+            size: 0,
+            hover: {
+              sizeOffset: 6
+            }
+          },
+          xaxis: {
+            categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
+              '10 Jan', '11 Jan', '12 Jan'
+            ],
+          },
+          tooltip: {
+            y: [
+              {
+                title: {
+                  formatter: function (val) {
+                    return val + " (mins)"
+                  }
+                }
+              },
+              {
+                title: {
+                  formatter: function (val) {
+                    return val + " per session"
+                  }
+                }
+              },
+              {
+                title: {
+                  formatter: function (val) {
+                    return val;
+                  }
+                }
+              }
+            ]
+          },
+          grid: {
+            borderColor: '#f1f1f1',
+          }
+          };
+  
+          var chart = new ApexCharts(document.querySelector("#my-chart"), options);
+          chart.render();
+</script>
+    
+    {% endblock script %}
